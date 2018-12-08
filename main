@@ -1,3 +1,6 @@
+[requires]
+python_version = "2.7"
+
 from random import randrange
 
 def algebra(min,max,count):
