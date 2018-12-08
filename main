@@ -1,0 +1,102 @@
+from random import randrange
+
+def algebra(min,max,count):
+    for i in range(count):
+        num1 = randrange(min, max + 1)
+        num2 = randrange(min, max + 1)
+        x = int(randrange(0,20))
+        choice = randrange(0,4)
+        if choice == 0:
+            print(num1,"x+",num2,"=",num1*x+num2)
+        elif choice == 1:
+            print(num1,"+", num2,"x =",num1+num2*x)
+        elif choice == 2:
+            print(num1,"x -", num2,"=",num1 * x - num2)
+        elif choice == 3:
+            print(num1,"-",num2,"x =",num1 - num2*x)
+        print("\n")
+
+def math(min,max,type,counter):
+    totCorrect = 0
+    for x in range(counter):
+        num1 = randrange(min, max + 1)
+        num2 = randrange(min, max + 1)
+        if num1 >= num2:
+            big = num1
+            small = num2
+        else:
+            big = num2
+            small = num1
+        if type == "+":
+            total = big + small
+        elif type == "-":
+            total = big - small
+        elif type == "x":
+            total = big * small
+        elif type == "/":
+            total = big // small
+        else:
+            break
+        print("\n\n")
+        print('{:>4}'.format(big))
+        print(type,'{:>2}'.format(small))
+        print("----")
+##        answer = eval(input("  "))
+##        if answer == total:
+##            print("Correct!")
+##            totCorrect += 1
+##        elif answer != total:
+##            print("Incorrect")
+##            print("The correct answer is: %d" %total)
+##    print("\n\n\n")
+##    print("total number correct: %d" %totCorrect)
+##    print("you scored a ",totCorrect,"out of ", counter)
+
+
+def sequence(min, max, counter):
+    print("Write the missing number in the blank")
+    correct = 0
+    for x in range(counter):
+        num = randrange(min, max + 1)
+        print("___", num,"___")
+        print("\n\n")
+##        answer = eval(input())
+##        if answer == num - 1:
+##            print("Correct!")
+##            correct += 1
+##        else:
+##            print("Incorrect.  The correct answer is ", num - 1)
+##        print(num, " ___")
+##        print("\n\n")
+##        answer = eval(input())
+##        if answer == num + 1:
+##            print("Correct!")
+##            correct += 1
+##        else:
+##            print("Incorrect.  The correct answer is ", num + 1)
+##    print("\n\n\n")
+##    print("total number correct was ", correct, ".")
+##    print("you scored a ", correct, " out of ", counter * 2)
+
+def word(count):
+    words1 = ["they're", "their", "there"]
+    words2 = ["you're, your, your's"]
+    words3 = []
+
+    phrases1 = ["We are going over ___ later.",
+                "I went ___ when I was younger.",
+                "___ wasn't any food left when I checked.",
+                "___ is an old spooky house next to mine.",
+                "I don't like to look in ___ when its dark.",
+                "My mom told me to 'Sit right ___.'"]
+    phrases2 = ["I am giving you this, it is now ___."
+                "Let's go play are ___ house."
+                "___ a very smart kid and you try hard."]
+    phrases3 = []
+    print(phrases1[1])
+
+def table(x, y):
+    for line in range(x + 1):
+        for table in range(y + 1):
+            print(line * table, "\t",)
+        print()
